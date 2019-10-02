@@ -6,7 +6,7 @@ for i in $(find . -name *.c -print | sort --unique); do
     echo "    Compiling $i - gcc $i -lm -std=c11"
     gcc $i -lm -std=c11
     echo "    Running $i - ./a.out > /dev/null"
-    ./a.out > /dev/null
+    ./a.out
     rm -f a.out
     echo ""
 done
